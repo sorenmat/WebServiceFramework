@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions name="HelloWorldService" targetNamespace="http://ws.unitlinked.schantz.com/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:tns="http://ws.unitlinked.schantz.com/">
+    <wsdl:types>
+
+        <xs:schema elementFormDefault="unqualified" version="1.0" targetNamespace="http://ws.unitlinked.schantz.com/"
+                   xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.unitlinked.schantz.com/">
+            <xs:element type="tns:getDate" name="getDate"></xs:element>
+            <xs:element type="tns:getDateResponse" name="getDateResponse"></xs:element>
+            <xs:complexType name="getDate">
+                <xs:sequence></xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="getDateResponse">
+                <xs:sequence>
+                    <xs:element type="xs:string" name="return" minOccurs="0"></xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+
+
+    </wsdl:types>
+
+    <wsdl:message name="getDate">
+        <wsdl:part name="parameters" element="tns:getDate"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getDateResponse">
+        <wsdl:part name="parameters" element="tns:getDateResponse"></wsdl:part>
+    </wsdl:message>
+
+    <wsdl:portType name="ShowDate">
+        <wsdl:operation name="getDate">
+            <wsdl:input message="tns:getDate" name="getDate"></wsdl:input>
+            <wsdl:output message="tns:getDateResponse" name="getDateResponse"></wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <wsdl:binding type="tns:ShowDate" name="ShowDateServiceSoapBinding">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+        <wsdl:operation name="getDate">
+            <soap:operation soapAction=" " style="document"></soap:operation>
+            <wsdl:input name="getDate">
+                <soap:body use="literal"></soap:body>
+            </wsdl:input>
+            <wsdl:output name="getDateResponse">
+                <soap:body use="literal"></soap:body>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <wsdl:service name="ShowDateService">
+        <wsdl:port name="ShowDatePort" binding="tns:ShowDateServiceSoapBinding">
+            <soap:address location="http://localhost:8080/Time"></soap:address>
+        </wsdl:port>
+    </wsdl:service>
+
+</wsdl:definitions>
