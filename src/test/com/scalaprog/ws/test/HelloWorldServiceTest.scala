@@ -13,8 +13,8 @@ class HelloWorldServiceTest extends FunSuite {
     server.start()
 
     val svc = url("http://localhost:9090/Hello")
-    val country = Http(svc OK as.String)().toString
-    assert(country contains ("MyHelloWorldServiceSoapBinding"))
+    val wsdl = Http(svc OK as.String)().toString
+    assert(wsdl contains ("MyHelloWorldServiceSoapBinding"))
     server.stop()
   }
 }

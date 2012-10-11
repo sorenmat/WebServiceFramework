@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="net.databinder.dispatch:dispatch-core_2.9.2:0.9.2" type="repository">
+    <properties maven-id="net.databinder.dispatch:dispatch-core_2.9.2:0.9.2" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/dispatch-core_2.9.2-0.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scala-library-2.9.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/async-http-client-1.7.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/netty-3.4.4.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.6.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/lib/dispatch-core_2.9.2-0.9.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scala-library-2.9.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/async-http-client-1.7.5-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.6.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/dispatch-core_2.9.2-0.9.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scala-library-2.9.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/async-http-client-1.7.5-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/netty-3.4.4.Final-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.6.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

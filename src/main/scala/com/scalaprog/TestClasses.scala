@@ -7,6 +7,10 @@ class MyHelloWorld {
   def getLongMessage = "hejsa med dig, old friend"
 }
 
+class ListTestService {
+  def getMessages = List("Hello", "World")
+}
+
 class ShowDate {
   def getDate = new Date().toString
 }
