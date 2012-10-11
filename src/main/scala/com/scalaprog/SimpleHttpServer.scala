@@ -3,7 +3,9 @@ package com.scalaprog
 import collection.immutable.HashMap
 import com.sun.net.httpserver.HttpExchange
 
-abstract class SimpleHttpServer extends SimpleHttpServerBase {
+abstract class SimpleHttpServer(override val socketAddress: String = "127.0.0.1",
+                                override val port: Int = 8080,
+                                override val backlog: Int = 0) extends SimpleHttpServerBase(socketAddress, port, backlog) {
   private var getMappings = new HashMap[String, () => Any]
   private var postMappings = new HashMap[String, AnyRef]
 
